@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- left side container -->
+      <div id="leftContainer">
+        <!-- action button -->
+        <div id="actionBtnContainer">
+          <button class="actionBtn actionBtn--primary" id="Btn1">Choose Image</button>
+          <button class="actionBtn actionBtn--neutral" id="Btn2">Reset</button>
+          <button class="actionBtn actionBtn--success" id="Btn3">Download</button>
+          <input id="imageInput" type="file" accept=".png,.jpg,.jpeg,image/png,image/jpeg" max="1">
+        </div>
+
+        <!-- image screen -->
+        <div id="imageScreen">
+            <img id="image" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="placeholder" width="400">
+        </div>
+      </div>
+      <!-- right side editor control -->
+      <div id="editor">
+        <div class="editorHeader">
+          <h1>Filters</h1>
+          <p>Adjust the image with balanced, modern controls.</p>
+        </div>
+        <div class="filtersGrid">
+          <div class="filterItem">
+            <label for="brightness">brightness</label>
+            <input class="controls" id="brightness" type="range" min="0" max="200" value="100" />
+          </div>
+          <div class="filterItem">
+            <label for="contrast">contrast</label>
+            <input class="controls" id="contrast" type="range" min="0" max="200" value="100" />
+          </div>
+          <div class="filterItem">
+            <label for="saturation">saturation</label>
+            <input class="controls" id="saturation" type="range" min="0" max="200" value="100" />
+          </div>
+          <div class="filterItem">
+            <label for="hueRotation">hue rotation</label>
+            <input class="controls" id="hueRotation" type="range" min="0" max="360" value="0" />
+          </div>
+          <div class="filterItem">
+            <label for="blur">blur</label>
+            <input class="controls" id="blur" type="range" min="0" max="20" value="0" />
+          </div>
+          <div class="filterItem">
+            <label for="grayscale">grayscale</label>
+            <input class="controls" id="grayscale" type="range" min="0" max="100" value="0" />
+          </div>
+          <div class="filterItem">
+            <label for="sepia">sepia</label>
+            <input class="controls" id="sepia" type="range" min="0" max="100" value="0" />
+          </div>
+          <div class="filterItem">
+            <label for="opacity">opacity</label>
+            <input class="controls" id="opacity" type="range" min="0" max="100" value="100" />
+          </div>
+          <div class="filterItem">
+            <label for="invert">invert</label>
+            <input class="controls" id="invert" type="range" min="0" max="100" value="0" />
+          </div>
+        </div>
+        <div class="presetSection">
+          <h2>Presets</h2>
+          <div class="presetButtons">
+            <button class="presetBtn" type="button" data-preset="original">Original</button>
+            <button class="presetBtn" type="button" data-preset="vivid">Vivid</button>
+            <button class="presetBtn" type="button" data-preset="warm">Warm</button>
+            <button class="presetBtn" type="button" data-preset="mono">Mono</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
